@@ -17,4 +17,5 @@ public interface WeatherFeignClient {
                                  , @RequestParam("nx") int nx
                                  , @RequestParam("ny") int ny);
 
+
 }
