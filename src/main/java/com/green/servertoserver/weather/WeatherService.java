@@ -1,5 +1,6 @@
 package com.green.servertoserver.weather;
 
+import com.green.servertoserver.config.constants.ConstKma;
 import com.green.servertoserver.weather.model.WeatherUltraSrtNcstGetReq;
 import com.green.servertoserver.weather.model.feignclient.ResponseParent;
 import lombok.RequiredArgsConstructor;
@@ -11,12 +12,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class WeatherService {
     private final WeatherFeignClient weatherFeignClient;
+    private final ConstKma constKma;
 
     public ResponseParent ultraSrtNcst(WeatherUltraSrtNcstGetReq req) {
-        String serviceKey = "fte7et4WjQ2QQTSP51SJ6VZ%2FXA3aDUYv054aZFUsGdrVOKFJxQnmrKJGh%2Box%2FcnwsvpeJmLazXr4je1K01Uoow%3D%3D";
-        String dataType = "json";
-
-        ResponseParent responseParent = weatherFeignClient.getUltraSrtNcst(serviceKey, dataType
+        ResponseParent responseParent = weatherFeignClient.getUltraSrtNcst(constKma.getServiceKey(), constKma.getDataType()
                 , req.getBaseDate(), req.getBaseTime(), req.getNx(), req.getNy());
 
         //로직

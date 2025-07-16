@@ -1,3 +1,6 @@
 constants:
   feign-client:
-    kma-url: https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0
+    kma:
+      url: https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0
+      service-key: fte7et4WjQ2QQTSP51SJ6VZ%2FXA3aDUYv054aZFUsGdrVOKFJxQnmrKJGh%2Box%2FcnwsvpeJmLazXr4je1K01Uoow%3D%3D
+      data-type: json

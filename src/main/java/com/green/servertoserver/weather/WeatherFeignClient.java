@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(name = "kma"
-           , url = "${constants.feign-client.kma-url}"
+           , url = "${constants.feign-client.kma.url}"
 )
 public interface WeatherFeignClient {
     @GetMapping("/getUltraSrtNcst")
